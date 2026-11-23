@@ -1,0 +1,33 @@
+{
+  "version": "2.6.2",
+  "release_version": "1.0",
+  "released_at": "2026-11-23",
+  "summary": {
+    "title": "Gestion de Stock",
+    "owner": "José Tomas Ampuero Cabello",
+    "description": "Aplicación web modular en Python (Flask), HTML/CSS/JS y PostgreSQL para la gestión de inventario bajo regla FEFO, control de bodega, operación offline con sincronización y monitoreo manual de cadena de frío en una posta rural de Atención Primaria de Salud.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Snxw"
+      }
+    ],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "DFD - Arquitectura General",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": [],
+        "description": "Diagrama de flujo de datos entre usuarios, navegador (modo offline), servidor Flask y PostgreSQL."
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}
