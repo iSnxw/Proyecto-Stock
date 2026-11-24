@@ -25,11 +25,11 @@
         "cells": [
           {
             "position": {
-              "x": 227.99999999999216,
-              "y": 100.00000000000813
+              "x": 167.99999999999181,
+              "y": 100.00000000000864
             },
             "size": {
-              "width": 390,
+              "width": 430,
               "height": 190
             },
             "attrs": {
@@ -49,8 +49,8 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "4282a02f-908c-4247-a5af-afbc45b17847",
-                "3e9bcf23-52b8-4c7d-929e-52fa17cf25fc",
-                "647b879b-6eca-4e22-8290-0dd0a47fcfdc"
+                "647b879b-6eca-4e22-8290-0dd0a47fcfdc",
+                "3e9bcf23-52b8-4c7d-929e-52fa17cf25fc"
               ],
               "containedElements": [
                 "838f3c56-bcd8-4328-af05-1f255758c38b",
@@ -64,7 +64,7 @@
               "y": 100.00000000000813
             },
             "size": {
-              "width": 360,
+              "width": 420,
               "height": 190
             },
             "attrs": {
@@ -93,8 +93,8 @@
           },
           {
             "position": {
-              "x": 227.99999999999216,
-              "y": 402
+              "x": 177.99999999999184,
+              "y": 390
             },
             "size": {
               "width": 112.5,
@@ -210,8 +210,8 @@
           },
           {
             "position": {
-              "x": 659.75,
-              "y": 402
+              "x": 520,
+              "y": 390
             },
             "size": {
               "width": 112.5,
@@ -327,12 +327,12 @@
           },
           {
             "position": {
-              "x": 254,
-              "y": 165
+              "x": 174.24999999999184,
+              "y": 145.0000000000086
             },
             "size": {
-              "width": 60,
-              "height": 60
+              "width": 120,
+              "height": 110
             },
             "attrs": {
               "text": {
@@ -447,11 +447,11 @@
           },
           {
             "position": {
-              "x": 460,
-              "y": 210
+              "x": 440,
+              "y": 210.00000000000003
             },
             "size": {
-              "width": 120,
+              "width": 130,
               "height": 60
             },
             "attrs": {
@@ -571,12 +571,12 @@
           },
           {
             "position": {
-              "x": 736,
-              "y": 165.00000000000813
+              "x": 707.9999999999918,
+              "y": 145.0000000000086
             },
             "size": {
-              "width": 60,
-              "height": 60
+              "width": 110,
+              "height": 110
             },
             "attrs": {
               "text": {
@@ -691,8 +691,8 @@
           },
           {
             "position": {
-              "x": 882,
-              "y": 210
+              "x": 962,
+              "y": 210.00000000000003
             },
             "size": {
               "width": 120,
@@ -977,7 +977,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Consultas FEFO, escaneo\n y °C",
+              "name": "Ingresos, ajustes\n y cuarentena",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -993,11 +993,11 @@
               ]
             },
             "labels": [
-              "Consultas FEFO, escaneo\n y °C"
+              "Ingresos, ajustes\n y cuarentena"
             ],
-            "id": "3e9bcf23-52b8-4c7d-929e-52fa17cf25fc",
+            "id": "647b879b-6eca-4e22-8290-0dd0a47fcfdc",
             "source": {
-              "cell": "5cc81b59-2bdf-4ebf-86e9-01b67da028fb",
+              "cell": "31e0b6b5-449d-49ad-83cc-8d4ec42ed44e",
               "port": "28c3edc8-9bd7-4a41-b31f-3d74f9fc255e"
             },
             "target": {
@@ -1026,7 +1026,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Ingresos, ajustes\n y cuarentena",
+              "name": "Consultas FEFO, escaneo\n y °C",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1042,11 +1042,11 @@
               ]
             },
             "labels": [
-              "Ingresos, ajustes\n y cuarentena"
+              "Consultas FEFO, escaneo\n y °C"
             ],
-            "id": "647b879b-6eca-4e22-8290-0dd0a47fcfdc",
+            "id": "3e9bcf23-52b8-4c7d-929e-52fa17cf25fc",
             "source": {
-              "cell": "31e0b6b5-449d-49ad-83cc-8d4ec42ed44e",
+              "cell": "5cc81b59-2bdf-4ebf-86e9-01b67da028fb",
               "port": "28c3edc8-9bd7-4a41-b31f-3d74f9fc255e"
             },
             "target": {
