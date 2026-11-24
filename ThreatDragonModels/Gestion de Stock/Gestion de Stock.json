@@ -29,7 +29,7 @@
               "y": 100.00000000000813
             },
             "size": {
-              "width": 360,
+              "width": 390,
               "height": 190
             },
             "attrs": {
@@ -39,8 +39,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "e4aba5d1-5d15-46fa-9a6a-cf47d648ca35",
             "zIndex": -1,
+            "id": "e4aba5d1-5d15-46fa-9a6a-cf47d648ca35",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Dispositivo del Usuario\n (Zona no confiable)",
@@ -60,7 +60,7 @@
           },
           {
             "position": {
-              "x": 639.9999999999922,
+              "x": 689.9999999999922,
               "y": 100.00000000000813
             },
             "size": {
@@ -74,6 +74,7 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
+            "zIndex": -1,
             "id": "0a572dd4-f474-4f12-91dc-2855023cf02f",
             "data": {
               "type": "tm.BoundaryBox",
@@ -88,8 +89,7 @@
                 "faf61dce-3877-4373-b9f4-0a09b2608b62",
                 "20251d70-a94b-433d-ad03-5d0318732ea6"
               ]
-            },
-            "zIndex": -1
+            }
           },
           {
             "position": {
@@ -112,6 +112,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 0,
             "ports": {
               "groups": {
                 "top": {
@@ -195,7 +196,6 @@
               ]
             },
             "id": "5cc81b59-2bdf-4ebf-86e9-01b67da028fb",
-            "zIndex": 0,
             "data": {
               "type": "tm.Actor",
               "name": "TENS /\n Personal Clínico",
@@ -229,6 +229,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -322,8 +323,7 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "zIndex": 1
+            }
           },
           {
             "position": {
@@ -346,6 +346,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -429,7 +430,6 @@
               ]
             },
             "id": "838f3c56-bcd8-4328-af05-1f255758c38b",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Frontend Web y\n Modo Offline",
@@ -447,7 +447,7 @@
           },
           {
             "position": {
-              "x": 410,
+              "x": 460,
               "y": 210
             },
             "size": {
@@ -469,6 +469,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -552,7 +553,6 @@
               ]
             },
             "id": "7eff1135-d4c5-42b5-b7a8-a0b85fbbf91f",
-            "zIndex": 3,
             "data": {
               "type": "tm.Store",
               "name": "Almacenamiento Local \n(Navegador)",
@@ -571,7 +571,7 @@
           },
           {
             "position": {
-              "x": 686,
+              "x": 736,
               "y": 165.00000000000813
             },
             "size": {
@@ -590,6 +590,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -686,12 +687,11 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 4
+            }
           },
           {
             "position": {
-              "x": 832,
+              "x": 882,
               "y": 210
             },
             "size": {
@@ -713,6 +713,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -810,8 +811,7 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "zIndex": 5
+            }
           },
           {
             "shape": "flow",
