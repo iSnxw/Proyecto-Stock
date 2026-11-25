@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}Gestión de Stock, Bodega y Frío{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% if g.usuario %}
+    <header class="barra-superior">
+        <a href="{{ url_for('panel') }}">Posta Rural · Stock, Bodega y Frío</a>
+        <div class="usuario-info">
+            <span>{{ g.usuario.nombre }}</span>
+            <span class="etiqueta-rol">{{ g.usuario.rol }}</span>
+            <form action="{{ url_for('logout') }}" method="POST">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button type="submit" class="btn btn-salir">Cerrar sesión</button>
+            </form>
+        </div>
+    </header>
+    {% endif %}
+
+    <main class="contenedor">
+        {% with mensajes = get_flashed_messages(with_categories=true) %}
+            {% if mensajes %}
+                {% for categoria, texto in mensajes %}
+                    <div class="alerta alerta-{{ categoria }}">{{ texto }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block contenido %}{% endblock %}
+    </main>
+</body>
+</html>

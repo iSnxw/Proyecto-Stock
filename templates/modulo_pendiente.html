@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block titulo %}{{ titulo }}{% endblock %}
+
+{% block contenido %}
+<section class="tarjeta">
+    <h1>{{ titulo }}</h1>
+    <p class="subtitulo">{{ detalle }}</p>
+    <a href="{{ url_for('panel') }}" class="btn btn-secundario">Volver al Panel</a>
+</section>
+{% endblock %}

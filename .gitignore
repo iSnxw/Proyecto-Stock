@@ -1,0 +1,13 @@
+# Entorno virtual y variables secretas (NUNCA subir a GitHub)
+venv/
+.env
+
+# Archivos temporales de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos del sistema operativo y editor
+.DS_Store
+Thumbs.db
+.vscode/

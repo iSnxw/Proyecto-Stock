@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block titulo %}Acceso Denegado (403){% endblock %}
+
+{% block contenido %}
+<section class="tarjeta">
+    <h1>403 — Acceso Denegado</h1>
+    <p class="subtitulo">Tu rol actual ({{ g.usuario.rol }}) no tiene permisos para acceder a este módulo.</p>
+    <a href="{{ url_for('panel') }}" class="btn btn-secundario">Volver al Panel</a>
+</section>
+{% endblock %}
