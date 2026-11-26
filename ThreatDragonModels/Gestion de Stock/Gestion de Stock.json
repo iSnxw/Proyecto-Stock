@@ -29,7 +29,7 @@
               "y": 100.00000000000864
             },
             "size": {
-              "width": 430,
+              "width": 470,
               "height": 190
             },
             "attrs": {
@@ -49,8 +49,8 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "4282a02f-908c-4247-a5af-afbc45b17847",
-                "647b879b-6eca-4e22-8290-0dd0a47fcfdc",
-                "3e9bcf23-52b8-4c7d-929e-52fa17cf25fc"
+                "3e9bcf23-52b8-4c7d-929e-52fa17cf25fc",
+                "647b879b-6eca-4e22-8290-0dd0a47fcfdc"
               ],
               "containedElements": [
                 "838f3c56-bcd8-4328-af05-1f255758c38b",
@@ -61,10 +61,10 @@
           {
             "position": {
               "x": 689.9999999999922,
-              "y": 100.00000000000813
+              "y": 100.00000000000864
             },
             "size": {
-              "width": 420,
+              "width": 460,
               "height": 190
             },
             "attrs": {
@@ -83,10 +83,42 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "4282a02f-908c-4247-a5af-afbc45b17847"
+                "4282a02f-908c-4247-a5af-afbc45b17847",
+                "cd77bb12-eea3-4e12-a182-b052b5480985"
               ],
               "containedElements": [
-                "faf61dce-3877-4373-b9f4-0a09b2608b62",
+                "faf61dce-3877-4373-b9f4-0a09b2608b62"
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 1182,
+              "y": 100.00000000000864
+            },
+            "size": {
+              "width": 290,
+              "height": 190
+            },
+            "attrs": {
+              "label": {
+                "text": "Base de Datos\n"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "ed9ae49c-7a3a-4886-9ac3-ab08481063cf",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Base de Datos\n",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "cd77bb12-eea3-4e12-a182-b052b5480985"
+              ],
+              "containedElements": [
                 "20251d70-a94b-433d-ad03-5d0318732ea6"
               ]
             }
@@ -210,7 +242,7 @@
           },
           {
             "position": {
-              "x": 520,
+              "x": 577.4999999999922,
               "y": 390
             },
             "size": {
@@ -442,13 +474,35 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "9ea0a872-c66a-40dc-ad73-587aa4e94ec9",
+                  "title": "Caída por cortes de red o reenvío masivo de sincronización",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Caída operativa por cortes de internet en la posta rural o envío repetido/masivo desde el botón \"Sincronizar Datos Pendientes\" (CU-06, CU-07, CU-09, RNF-01).",
+                  "mitigation": "Continuidad operativa garantizada mediante Modo Offline en el navegador (CU-06, RNF-01), idempotencia por UUID único (CU-09) que omite reenvíos repetidos sin reprocesar stock, límites de tamaño en cargas JSON y control de tasa en rutas críticas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
             "position": {
-              "x": 440,
-              "y": 210.00000000000003
+              "x": 490,
+              "y": 220
             },
             "size": {
               "width": 130,
@@ -566,7 +620,27 @@
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "c54cded7-808e-4dc0-89d2-4366d175446a",
+                  "title": "Manipulación de Cola Offline, JSON o SQL",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering / Manipulación",
+                  "description": "Alteración manual de la Cola Offline en el navegador (cantidades, fechas o temperatura_c antes de sincronizar), manipulación de JSON o inyección SQL (CU-03, CU-05, CU-06, CU-07, CU-08).",
+                  "mitigation": "Revalidación estricta en Backend Flask de tipos, stock disponible y rangos térmicos; consultas SQL parametrizadas (psycopg2) y restricciones CHECK en Neon PostgreSQL; control de idempotencia mediante clave única id_transaccion_offline (UK) en CU-09.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -686,13 +760,48 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "71610544-2495-4879-a5bd-fb6518316c3e",
+                  "title": "Suplantación de identidad (TENS o BODEGA)",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un tercero o usuario no autorizado intenta acceder como TENS o BODEGA mediante robo de sesión, fuerza bruta o uso de cuentas deshabilitadas (CU-01, tabla USUARIOS).",
+                  "mitigation": "Contraseñas con hash seguro en USUARIOS.password_hash (Werkzeug/bcrypt), validación obligatoria de activo = TRUE en cada acceso, bloqueo temporal por intentos fallidos y cookies de sesión firmadas con HttpOnly, Secure, SameSite=Lax y expiración por inactividad.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "b25a6ba3-16ea-42f4-8046-5989f809d477",
+                  "title": "Elevación de privilegios de TENS a rutas de BODEGA",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Elevation of privilege / Elevación de privilegios",
+                  "description": "Un usuario con rol TENS intenta invocar directamente rutas de BODEGA para crear productos, deshacer descuentos, ajustar stock o liberar lotes en CUARENTENA (RF-09, RF-12, RNF-03).",
+                  "mitigation": "Mitigaciones: Control de acceso por roles (RBAC) validado en el servidor Flask en cada ruta protegida (rol BODEGA o TENS) y bloqueo en backend contra descuentos de lotes vencidos o en CUARENTENA y contra reversión de salidas por TENS.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
             "position": {
-              "x": 962,
-              "y": 210.00000000000003
+              "x": 1207,
+              "y": 170.0000000000086
             },
             "size": {
               "width": 120,
@@ -700,7 +809,7 @@
             },
             "attrs": {
               "text": {
-                "text": "PostgreSQL \n(StockManager)"
+                "text": "Neon PostgreSQL ´\n(Nube)"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -799,7 +908,7 @@
             "id": "20251d70-a94b-433d-ad03-5d0318732ea6",
             "data": {
               "type": "tm.Store",
-              "name": "PostgreSQL \n(StockManager)",
+              "name": "Neon PostgreSQL ´\n(Nube)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -810,7 +919,27 @@
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "ce12c41c-d6af-46b3-8e47-b3a93d224421",
+                  "title": "Repudio de movimientos de stock o cadena de frío",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Repudiation / Repudiación",
+                  "description": "Un funcionario niega haber descontado un insumo, ingresado un lote con error, generado una alerta roja o liberado un lote desde CUARENTENA (MOVIMIENTOS y REGISTROS_FRIO).",
+                  "mitigation": "Registro obligatorio vinculado a usuario_id en MOVIMIENTOS y REGISTROS_FRIO, doble marca temporal (fecha_dispositivo y fecha_servidor), bandera origen_offline, campo observacion para justificar liberaciones/bajas/ajustes y borrado lógico (activo = FALSE).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -833,54 +962,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Cola offline",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Cola offline"
-            ],
-            "id": "25b25dfc-58e3-4193-9b96-d83733eacbae",
-            "source": {
-              "cell": "838f3c56-bcd8-4328-af05-1f255758c38b",
-              "port": "1409a370-2a3b-4ce6-bd20-23d3f14bbba4"
-            },
-            "target": {
-              "cell": "7eff1135-d4c5-42b5-b7a8-a0b85fbbf91f",
-              "port": "afb699e7-9600-42a2-98df-c252e9c32dd3"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "HTTPS: Login, FEFO, Sync",
+              "name": "F3 — HTTPS/JSON: Login, FEFO, Sync",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -890,14 +972,33 @@
               "isEncrypted": true,
               "isPublicNetwork": true,
               "protocol": "HTTPS",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "db400b96-b5e2-4912-8b3a-5670de3fc4e2",
+                  "title": "Divulgación de credenciales y tráfico en tránsito (F3 y F4)",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Interceptación de credenciales, sesiones o registros en redes rurales o móviles; exposición de la cadena de conexión a Neon o errores internos del servidor (Flujos F3 y F4).",
+                  "mitigation": "Cifrado obligatorio en tránsito con HTTPS entre navegador y Flask, conexión SSL/TLS hacia Neon PostgreSQL sobre TCP 5432, credenciales aisladas en variables de entorno (.env en .gitignore) y DEBUG = False en producción.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": [
                 "e4aba5d1-5d15-46fa-9a6a-cf47d648ca35",
                 "0a572dd4-f474-4f12-91dc-2855023cf02f"
-              ]
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
-              "HTTPS: Login, FEFO, Sync"
+              "F3 — HTTPS/JSON: Login, FEFO, Sync"
             ],
             "id": "4282a02f-908c-4247-a5af-afbc45b17847",
             "source": {
@@ -919,6 +1020,55 @@
                   "name": "block"
                 },
                 "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "F1a — Consultas FEFO, escaneo\n y °C",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "e4aba5d1-5d15-46fa-9a6a-cf47d648ca35"
+              ]
+            },
+            "labels": [
+              "F1a — Consultas FEFO, escaneo\n y °C"
+            ],
+            "id": "3e9bcf23-52b8-4c7d-929e-52fa17cf25fc",
+            "source": {
+              "cell": "5cc81b59-2bdf-4ebf-86e9-01b67da028fb",
+              "port": "28c3edc8-9bd7-4a41-b31f-3d74f9fc255e"
+            },
+            "target": {
+              "cell": "838f3c56-bcd8-4328-af05-1f255758c38b",
+              "port": "8cca6d84-bc35-4ac9-a95d-3b19522504dd"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
                   "name": "block"
                 },
                 "strokeDasharray": null
@@ -930,7 +1080,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "SQL parametrizado",
+              "name": "F4 — SQL parametrizado (SSL/TLS)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -941,10 +1091,13 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "0a572dd4-f474-4f12-91dc-2855023cf02f",
+                "ed9ae49c-7a3a-4886-9ac3-ab08481063cf"
+              ]
             },
             "labels": [
-              "SQL parametrizado"
+              "F4 — SQL parametrizado (SSL/TLS)"
             ],
             "id": "cd77bb12-eea3-4e12-a182-b052b5480985",
             "source": {
@@ -977,7 +1130,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Ingresos, ajustes\n y cuarentena",
+              "name": "F1b — Ingresos, ajustes\n y cuarentena",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -993,7 +1146,7 @@
               ]
             },
             "labels": [
-              "Ingresos, ajustes\n y cuarentena"
+              "F1b — Ingresos, ajustes\n y cuarentena"
             ],
             "id": "647b879b-6eca-4e22-8290-0dd0a47fcfdc",
             "source": {
@@ -1015,7 +1168,7 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": ""
+                  "name": "block"
                 },
                 "strokeDasharray": null
               }
@@ -1026,32 +1179,30 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Consultas FEFO, escaneo\n y °C",
+              "name": "F2 — Cola offline (UUID)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "isBidirectional": false,
+              "isBidirectional": true,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": [
-                "e4aba5d1-5d15-46fa-9a6a-cf47d648ca35"
-              ]
+              "trustBoundaryIds": []
             },
             "labels": [
-              "Consultas FEFO, escaneo\n y °C"
+              "F2 — Cola offline (UUID)"
             ],
-            "id": "3e9bcf23-52b8-4c7d-929e-52fa17cf25fc",
+            "id": "25b25dfc-58e3-4193-9b96-d83733eacbae",
             "source": {
-              "cell": "5cc81b59-2bdf-4ebf-86e9-01b67da028fb",
-              "port": "28c3edc8-9bd7-4a41-b31f-3d74f9fc255e"
+              "cell": "838f3c56-bcd8-4328-af05-1f255758c38b",
+              "port": "1409a370-2a3b-4ce6-bd20-23d3f14bbba4"
             },
             "target": {
-              "cell": "838f3c56-bcd8-4328-af05-1f255758c38b",
-              "port": "8cca6d84-bc35-4ac9-a95d-3b19522504dd"
+              "cell": "7eff1135-d4c5-42b5-b7a8-a0b85fbbf91f",
+              "port": "afb699e7-9600-42a2-98df-c252e9c32dd3"
             },
             "vertices": []
           }
@@ -1061,6 +1212,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 6
   }
 }
