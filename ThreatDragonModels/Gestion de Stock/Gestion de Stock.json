@@ -29,7 +29,7 @@
               "y": 100.00000000000864
             },
             "size": {
-              "width": 470,
+              "width": 490,
               "height": 190
             },
             "attrs": {
@@ -664,7 +664,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Neon PostgreSQL ´\n(Nube)"
+                "text": "Neon PostgreSQL\n(Nube)"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -763,7 +763,7 @@
             "id": "20251d70-a94b-433d-ad03-5d0318732ea6",
             "data": {
               "type": "tm.Store",
-              "name": "Neon PostgreSQL ´\n(Nube)",
+              "name": "Neon PostgreSQL\n(Nube)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -817,7 +817,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "F2 — HTTPS/JSON: Login, FEFO, Bodega y Frío",
+              "name": " F2 — HTTPS/JSON: \nLogin, FEFO, Bodega y Frío",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -853,7 +853,7 @@
               }
             },
             "labels": [
-              "F2 — HTTPS/JSON: Login, FEFO, Bodega y Frío"
+              " F2 — HTTPS/JSON: \nLogin, FEFO, Bodega y Frío"
             ],
             "id": "4282a02f-908c-4247-a5af-afbc45b17847",
             "source": {
@@ -940,7 +940,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "F3 — SQL parametrizado (SSL/TLS)",
+              "name": " F3 — SQL parametrizado (SSL/TLS)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -957,7 +957,7 @@
               ]
             },
             "labels": [
-              "F3 — SQL parametrizado (SSL/TLS)"
+              " F3 — SQL parametrizado (SSL/TLS)"
             ],
             "id": "cd77bb12-eea3-4e12-a182-b052b5480985",
             "source": {
@@ -979,7 +979,7 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": ""
+                  "name": "block"
                 },
                 "strokeDasharray": null
               }
@@ -996,7 +996,7 @@
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "isBidirectional": false,
+              "isBidirectional": true,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
