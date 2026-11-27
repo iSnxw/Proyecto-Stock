@@ -34,7 +34,7 @@
             },
             "attrs": {
               "label": {
-                "text": "Dispositivo del Usuario\n (Zona no confiable)"
+                "text": "Dispositivo Cliente \n(PC / Celular)"
               }
             },
             "visible": true,
@@ -43,7 +43,7 @@
             "id": "e4aba5d1-5d15-46fa-9a6a-cf47d648ca35",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Dispositivo del Usuario\n (Zona no confiable)",
+              "name": "Dispositivo Cliente \n(PC / Celular)",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -53,8 +53,7 @@
                 "647b879b-6eca-4e22-8290-0dd0a47fcfdc"
               ],
               "containedElements": [
-                "838f3c56-bcd8-4328-af05-1f255758c38b",
-                "7eff1135-d4c5-42b5-b7a8-a0b85fbbf91f"
+                "838f3c56-bcd8-4328-af05-1f255758c38b"
               ]
             }
           },
@@ -69,7 +68,7 @@
             },
             "attrs": {
               "label": {
-                "text": "Perímetro del Servidor \n(Zona controlada)"
+                "text": "Servidor de Aplicación\n (Nube)"
               }
             },
             "visible": true,
@@ -78,7 +77,7 @@
             "id": "0a572dd4-f474-4f12-91dc-2855023cf02f",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Perímetro del Servidor \n(Zona controlada)",
+              "name": "Servidor de Aplicación\n (Nube)",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -102,16 +101,16 @@
             },
             "attrs": {
               "label": {
-                "text": "Base de Datos\n"
+                "text": "Base de Datos en la Nube\n (Neon)"
               }
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "ed9ae49c-7a3a-4886-9ac3-ab08481063cf",
             "zIndex": -1,
+            "id": "ed9ae49c-7a3a-4886-9ac3-ab08481063cf",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Base de Datos\n",
+              "name": "Base de Datos en la Nube\n (Neon)",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -368,7 +367,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Frontend Web y\n Modo Offline"
+                "text": "Frontend Web\n(Navegador)"
               },
               "body": {
                 "stroke": "#333333",
@@ -464,7 +463,7 @@
             "id": "838f3c56-bcd8-4328-af05-1f255758c38b",
             "data": {
               "type": "tm.Process",
-              "name": "Frontend Web y\n Modo Offline",
+              "name": "Frontend Web\n(Navegador)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -496,150 +495,6 @@
                 "informationDisclosure": 0,
                 "denialOfService": 1,
                 "elevationOfPrivilege": 0
-              }
-            }
-          },
-          {
-            "position": {
-              "x": 490,
-              "y": 220
-            },
-            "size": {
-              "width": 130,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "Almacenamiento Local \n(Navegador)"
-              },
-              "topLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              },
-              "bottomLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "store",
-            "zIndex": 3,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "fe741b7a-86fb-4d31-a9a2-4d7e3160103e"
-                },
-                {
-                  "group": "right",
-                  "id": "9e49df4a-438e-406b-8964-0e5ac30308fd"
-                },
-                {
-                  "group": "bottom",
-                  "id": "173111b7-6b87-489d-a95f-88831b8fef14"
-                },
-                {
-                  "group": "left",
-                  "id": "afb699e7-9600-42a2-98df-c252e9c32dd3"
-                }
-              ]
-            },
-            "id": "7eff1135-d4c5-42b5-b7a8-a0b85fbbf91f",
-            "data": {
-              "type": "tm.Store",
-              "name": "Almacenamiento Local \n(Navegador)",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isALog": false,
-              "isEncrypted": false,
-              "isSigned": false,
-              "storesCredentials": false,
-              "storesInventory": false,
-              "threats": [
-                {
-                  "id": "c54cded7-808e-4dc0-89d2-4366d175446a",
-                  "title": "Manipulación de Cola Offline, JSON o SQL",
-                  "status": "Mitigated",
-                  "severity": "High",
-                  "type": "Tampering / Manipulación",
-                  "description": "Alteración manual de la Cola Offline en el navegador (cantidades, fechas o temperatura_c antes de sincronizar), manipulación de JSON o inyección SQL (CU-03, CU-05, CU-06, CU-07, CU-08).",
-                  "mitigation": "Revalidación estricta en Backend Flask de tipos, stock disponible y rangos térmicos; consultas SQL parametrizadas (psycopg2) y restricciones CHECK en Neon PostgreSQL; control de idempotencia mediante clave única id_transaccion_offline (UK) en CU-09.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 3,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 1,
-                "repudiation": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 0
               }
             }
           },
@@ -962,7 +817,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "F3 — HTTPS/JSON: Login, FEFO, Sync",
+              "name": "F2 — HTTPS/JSON: Login, FEFO, Bodega y Frío",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -998,7 +853,7 @@
               }
             },
             "labels": [
-              "F3 — HTTPS/JSON: Login, FEFO, Sync"
+              "F2 — HTTPS/JSON: Login, FEFO, Bodega y Frío"
             ],
             "id": "4282a02f-908c-4247-a5af-afbc45b17847",
             "source": {
@@ -1020,7 +875,7 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": ""
+                  "name": "block"
                 },
                 "strokeDasharray": null
               }
@@ -1037,7 +892,7 @@
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "isBidirectional": false,
+              "isBidirectional": true,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
@@ -1058,7 +913,12 @@
               "cell": "838f3c56-bcd8-4328-af05-1f255758c38b",
               "port": "8cca6d84-bc35-4ac9-a95d-3b19522504dd"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 234,
+                "y": 290
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1080,7 +940,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "F4 — SQL parametrizado (SSL/TLS)",
+              "name": "F3 — SQL parametrizado (SSL/TLS)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1097,7 +957,7 @@
               ]
             },
             "labels": [
-              "F4 — SQL parametrizado (SSL/TLS)"
+              "F3 — SQL parametrizado (SSL/TLS)"
             ],
             "id": "cd77bb12-eea3-4e12-a182-b052b5480985",
             "source": {
@@ -1156,53 +1016,6 @@
             "target": {
               "cell": "838f3c56-bcd8-4328-af05-1f255758c38b",
               "port": "8cca6d84-bc35-4ac9-a95d-3b19522504dd"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "F2 — Cola offline (UUID)",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "F2 — Cola offline (UUID)"
-            ],
-            "id": "25b25dfc-58e3-4193-9b96-d83733eacbae",
-            "source": {
-              "cell": "838f3c56-bcd8-4328-af05-1f255758c38b",
-              "port": "1409a370-2a3b-4ce6-bd20-23d3f14bbba4"
-            },
-            "target": {
-              "cell": "7eff1135-d4c5-42b5-b7a8-a0b85fbbf91f",
-              "port": "afb699e7-9600-42a2-98df-c252e9c32dd3"
             },
             "vertices": []
           }
