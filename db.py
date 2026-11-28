@@ -1,13 +1,28 @@
 import os
+from contextlib import contextmanager
 import psycopg2
 from psycopg2.extras import RealDictCursor
-from dotenv import load_dotenv
-
-load_dotenv()
 
 
-def get_connection():
-    database_url = os.getenv("DATABASE_URL")
-    if not database_url:
-        raise ValueError("Falta DATABASE_URL en el archivo .env")
-    return psycopg2.connect(database_url, cursor_factory=RealDictCursor)
+def _get_database_url() -> str:
+    url = os.environ.get("DATABASE_URL")
+    if not url:
+        raise RuntimeError("Falta la variable de entorno DATABASE_URL.")
+    return url
+
+
+@contextmanager
+def get_db():
+    """Entrega una conexión PostgreSQL con cursor de diccionario y rollback seguro."""
+    conn = psycopg2.connect(
+        _get_database_url(),
+        cursor_factory=RealDictCursor,
+        connect_timeout=10,
+    )
+    try:
+        yield conn
+    except Exception:
+        conn.rollback()
+        raise
+    finally:
+        conn.close()
